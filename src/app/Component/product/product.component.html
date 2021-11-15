@@ -1,0 +1,43 @@
+
+
+
+
+<div class="product container my-5">  
+            
+        <select name="" id="" [(ngModel)]="selectedDevice"  (ngModelChange)="onChange()">
+          <option [value]="0">AllProduct</option>
+          <option *ngFor='let item of CategoryList' [value]="item.ID">{{item.Name}} </option>
+
+        </select>
+
+        <table *ngIf="!IsPurshased" class="table ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">price</th>
+            </tr>
+          </thead>
+          <tbody>
+              <ng-container  *ngFor ="let item of SelectedProduct; let i=index ">
+               
+              <ng-container>
+
+              </ng-container>
+                <tr  [ngClass]="{'my_class': item.Quantity==1}"  *ngIf= "item.Quantity!==0">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{item.Name}}</td>
+                    <td>{{item.Quantity}}</td>
+                    <td>{{item.Price}}</td>
+                    <td> <button class="btn btn-primary " (click)="decreadeQuantity(item)">buy</button></td>
+                  </tr>
+
+              </ng-container>
+
+           
+          </tbody>
+        </table>
+                
+</div>
+
