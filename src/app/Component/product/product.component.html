@@ -22,9 +22,7 @@
           <tbody>
               <ng-container  *ngFor ="let item of SelectedProduct; let i=index ">
                
-              <ng-container>
-
-              </ng-container>
+             
                 <tr  [ngClass]="{'my_class': item.Quantity==1}"  *ngIf= "item.Quantity!==0">
                     <th scope="row">{{i+1}}</th>
                     <td>{{item.Name}}</td>
@@ -38,6 +36,40 @@
            
           </tbody>
         </table>
-                
+
+        
+
+
+           <div class=" row border my-5 py-5 px-5 ">
+
+            <ng-container  *ngFor ="let item of SelectedProduct; let i=index ">
+
+              <div style="border: none;" class="card col-4 my-2 ">
+
+                <div class="px-3" style="width: 18rem; " Border='grey'>
+                  <img class="card-img-top" src="../../../assets/2.jpg" alt="Card image cap" height="300px">
+                  <div class="card-body">
+                    <h5 class="card-title ">  {{item.Name}}</h5>
+                    <p class="card-text">لا توجد تقيمات</p>
+                    <h5 class="card-title "> {{item.Price | currency:'EGP'}} </h5>
+                    <h5 class="card-title "> {{date | date}}  </h5>
+                    <a  class="btn btn-primary">أضف الي الشنطه</a>       
+                  </div>
+                </div> 
+
+
+              </div>
+          
+
+          </ng-container>
+
+           </div>
+         
+           
+          
+
+
+         <div> {{"30111012610371"|nationalID:'full'}}</div>
+         <div> {{"1234567890123456"|creditCard}}</div>
 </div>
 

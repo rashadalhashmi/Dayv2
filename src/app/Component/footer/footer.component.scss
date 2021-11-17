@@ -1,0 +1,19 @@
+.page-footer{
+    height: 100px;
+    color: white;
+    background-color: rgb(34, 34, 34);
+
+}
+
+.footer-link {
+    height: 100%;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: small;
+   
+}
+
+.footer-link{
+    list-style-type: none;
+}
